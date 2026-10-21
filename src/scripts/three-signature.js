@@ -108,6 +108,7 @@ export function initSignature3D(containerId = 'hero-3d-canvas-wrap') {
   let mouseY = 0;
 
   function onPointerMove(e) {
+    if (e.pointerType === 'touch') return;
     const rect = container.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;

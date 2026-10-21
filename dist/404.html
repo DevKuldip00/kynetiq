@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
   
-  <script type="module" crossorigin src="/assets/main-Bd3XaP3e.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-D85xV5QD.css">
+  <script type="module" crossorigin src="/assets/main-DDbaT0js.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-c85wGO7W.css">
 </head>
 <body>
   <!-- Header -->
@@ -32,10 +32,30 @@
       </nav>
 
       <div class="nav-actions">
-        <a href="/" class="btn btn-primary btn-sm">RETURN HOME</a>
+        <a href="/" class="btn btn-primary btn-sm btn-header-cta">HOME</a>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" aria-label="Mobile Navigation">
+    <nav class="mobile-nav-links">
+      <a href="/" class="mobile-nav-link">Home</a>
+      <a href="/about.html" class="mobile-nav-link">About Academy</a>
+      <a href="/course.html" class="mobile-nav-link">Trainer Course</a>
+      <a href="/experience.html" class="mobile-nav-link">Training Experience</a>
+      <a href="/contact.html" class="mobile-nav-link">Contact & Enquiry</a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <a href="/course.html" class="btn btn-primary" style="width: 100%; text-align: center;">EXPLORE COURSE</a>
+      <button type="button" class="btn btn-whatsapp" data-whatsapp-enquire>CHAT ON WHATSAPP</button>
+    </div>
+  </div>
 
   <main style="min-height: 80vh; display: flex; align-items: center; justify-content: center; padding-top: var(--header-height);">
     <div class="container" style="text-align: center; max-width: 680px;">

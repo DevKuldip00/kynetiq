@@ -55,6 +55,25 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
       });
     });
+
+    // Keyboard accessibility: Escape closes the drawer
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileDrawer.classList.contains('open')) {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        mobileDrawer.classList.remove('open');
+        document.body.style.overflow = '';
+        menuToggle.focus();
+      }
+    });
+
+    // Reset drawer state on resize to tablet/desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900 && mobileDrawer.classList.contains('open')) {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        mobileDrawer.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }, { passive: true });
   }
 
   // 4. Scroll Reveal Observer
